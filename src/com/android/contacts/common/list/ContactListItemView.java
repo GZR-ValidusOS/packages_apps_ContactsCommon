@@ -257,7 +257,8 @@ public class ContactListItemView extends ViewGroup
     public ContactListItemView(Context context) {
         super(context);
 
-        mTextHighlighter = new TextHighlighter(Typeface.BOLD);
+        mTextHighlighter = new TextHighlighter(Typeface.BOLD,
+                context.getResources().getColor(R.color.text_highlight_color));
         mNameHighlightSequence = new ArrayList<HighlightSequence>();
         mNumberHighlightSequence = new ArrayList<HighlightSequence>();
     }
@@ -332,7 +333,8 @@ public class ContactListItemView extends ViewGroup
             a.recycle();
         }
 
-        mTextHighlighter = new TextHighlighter(Typeface.BOLD);
+        mTextHighlighter = new TextHighlighter(Typeface.BOLD,
+                context.getResources().getColor(R.color.text_highlight_color));
 
         if (R.styleable.Theme != null) {
             a = getContext().obtainStyledAttributes(R.styleable.Theme);

@@ -171,4 +171,10 @@
 
     <!-- The selected photo color -->
     <color name="photo_selected_color">#1789ce</color>
+
+    <color name="contact_tile_text_color">#ff202020</color>
+    <color name="frequent_contact_text_color">#ff000000</color>
+    <color name="quick_contact_text_color">#ffffffff</color>
+    <color name="text_highlight_color">#3B77E7</color>
+
 </resources>
