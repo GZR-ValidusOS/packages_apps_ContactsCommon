@@ -112,10 +112,10 @@ public class AccountSelectionUtil {
         return getSelectAccountDialog(activity, resId, onClickListener, null);
     }
 
-    public static Dialog getSelectAccountDialog(Context context, int resId,
+    public static Dialog getSelectAccountDialog(Activity activity, int resId,
             DialogInterface.OnClickListener onClickListener,
             DialogInterface.OnCancelListener onCancelListener) {
-        return getSelectAccountDialog(context, resId, onClickListener,
+        return getSelectAccountDialog(activity, resId, onClickListener,
             onCancelListener, true);
     }
 
@@ -200,22 +200,15 @@ public class AccountSelectionUtil {
 
    public static void doImport(Activity activity, int resId, AccountWithDataSet account,
             int subscriptionId) {
-<<<<<<< HEAD
         switch (resId) {
             case R.string.import_from_sim: {
-                doImportFromSim(context, account, subscriptionId);
+                doImportFromSim(activity, account, subscriptionId);
                 break;
             }
             case R.string.import_from_vcf_file: {
-                doImportFromVcfFile(context, account);
+                doImportFromVcfFile(activity, account);
                 break;
             }
-=======
-        if (resId == R.string.import_from_sim) {
-            doImportFromSim(activity, account, subscriptionId);
-        } else if (resId == R.string.import_from_vcf_file) {
-            doImportFromVcfFile(activity, account);
->>>>>>> android-7.1.1_r12
         }
     }
 
